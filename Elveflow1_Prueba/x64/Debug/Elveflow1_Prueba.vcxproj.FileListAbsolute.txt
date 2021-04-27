@@ -1,0 +1,4 @@
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\x64\Debug\Elveflow1_Prueba.vcxprojAssemblyReference.cache
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\x64\Debug\Elveflow1_Prueba.exe
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\x64\Debug\Elveflow1Prueba.MyForm.resources
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\x64\Debug\Elveflow1_Prueba.vcxproj.GenerateResource.cache

@@ -1,0 +1,28 @@
+﻿  MyForm.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\stdint.h(49,1): warning C4005: 'INT8_MIN': redefinición de macro
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\dll\fundtypes.h(291): message : vea la definición anterior de 'INT8_MIN'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\stdint.h(50,1): warning C4005: 'INT16_MIN': redefinición de macro
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\dll\fundtypes.h(294): message : vea la definición anterior de 'INT16_MIN'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\stdint.h(51,1): warning C4005: 'INT32_MIN': redefinición de macro
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\dll\fundtypes.h(297): message : vea la definición anterior de 'INT32_MIN'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\stdint.h(52,1): warning C4005: 'INT64_MIN': redefinición de macro
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\dll\fundtypes.h(370): message : vea la definición anterior de 'INT64_MIN'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\stdint.h(53,1): warning C4005: 'INT8_MAX': redefinición de macro
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\dll\fundtypes.h(301): message : vea la definición anterior de 'INT8_MAX'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\stdint.h(54,1): warning C4005: 'INT16_MAX': redefinición de macro
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\dll\fundtypes.h(304): message : vea la definición anterior de 'INT16_MAX'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\stdint.h(55,1): warning C4005: 'INT32_MAX': redefinición de macro
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\dll\fundtypes.h(307): message : vea la definición anterior de 'INT32_MAX'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\stdint.h(56,1): warning C4005: 'INT64_MAX': redefinición de macro
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\dll\fundtypes.h(373): message : vea la definición anterior de 'INT64_MAX'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\stdint.h(57,1): warning C4005: 'UINT8_MAX': redefinición de macro
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\dll\fundtypes.h(312): message : vea la definición anterior de 'UINT8_MAX'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\stdint.h(58,1): warning C4005: 'UINT16_MAX': redefinición de macro
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\dll\fundtypes.h(315): message : vea la definición anterior de 'UINT16_MAX'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\stdint.h(59,1): warning C4005: 'UINT32_MAX': redefinición de macro
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\dll\fundtypes.h(318): message : vea la definición anterior de 'UINT32_MAX'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\stdint.h(60,1): warning C4005: 'UINT64_MAX': redefinición de macro
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\dll\fundtypes.h(376): message : vea la definición anterior de 'UINT64_MAX'
+D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\MyForm.cpp(8,1): warning C4829: Parámetros posiblemente incorrectos para la función main. Utilice 'int main(Platform::Array<Platform::String^>^ argv)'
+  AF1.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  Elveflow1_Prueba.vcxproj -> D:\UNIVERSIDAD\proyecto\Elveflow1_Prueba\x64\Debug\Elveflow1_Prueba.exe

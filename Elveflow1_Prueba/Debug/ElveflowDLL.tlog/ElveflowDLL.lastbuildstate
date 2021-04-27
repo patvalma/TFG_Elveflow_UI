@@ -1,0 +1,2 @@
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v140:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=8.1
+Debug|Win32|D:\dev\SDK\SDK_V3_02_01\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\|

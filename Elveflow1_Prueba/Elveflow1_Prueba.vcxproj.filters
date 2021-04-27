@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Archivos de origen\sub_main">
+      <UniqueIdentifier>{cf8e14b9-1195-41bb-8b71-01411c1ddc7d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\dll\platdefines.h">
+      <Filter>Archivos de recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\dll\extcode.h">
+      <Filter>Archivos de recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\dll\fundtypes.h">
+      <Filter>Archivos de recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\dll\hosttype.h">
+      <Filter>Archivos de recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\dll\ILVDataInterface.h">
+      <Filter>Archivos de recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\dll\ILVTypeInterface.h">
+      <Filter>Archivos de recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\dll\lv_epilog.h">
+      <Filter>Archivos de recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\dll\lv_prolog.h">
+      <Filter>Archivos de recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\stdafx.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\targetver.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\AF1.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\BFS.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\error_check.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\F_SReader.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\MUX.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\MUX_Dist.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\OB1.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="MyForm.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="dll\Elveflow64.h">
+      <Filter>Archivos de recursos</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\dll\Elveflow64.aliases">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\dll\Elveflow64.dll">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+    <None Include="C:\Users\patri\Desktop\SDK_V3_02_01\DLL64\DLL64\Example_DLL64_Visual_Cpp\ElveflowDLL\dll\Elveflow64.ini">
+      <Filter>Archivos de recursos</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AF1.cpp">
+      <Filter>Archivos de origen\sub_main</Filter>
+    </ClCompile>
+    <ClCompile Include="BFS.cpp">
+      <Filter>Archivos de origen\sub_main</Filter>
+    </ClCompile>
+    <ClCompile Include="error_check.cpp">
+      <Filter>Archivos de origen\sub_main</Filter>
+    </ClCompile>
+    <ClCompile Include="F_SReader.cpp">
+      <Filter>Archivos de origen\sub_main</Filter>
+    </ClCompile>
+    <ClCompile Include="MUX.cpp">
+      <Filter>Archivos de origen\sub_main</Filter>
+    </ClCompile>
+    <ClCompile Include="MUX_Dist.cpp">
+      <Filter>Archivos de origen\sub_main</Filter>
+    </ClCompile>
+    <ClCompile Include="OB1.cpp">
+      <Filter>Archivos de origen\sub_main</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Archivos de origen\sub_main</Filter>
+    </ClCompile>
+    <ClCompile Include="MyForm.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="dll\Elveflow64.lib">
+      <Filter>Archivos de recursos</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
