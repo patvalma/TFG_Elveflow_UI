@@ -11,6 +11,7 @@
 #include <string.h>
 
 
+
 namespace Elveflow1Prueba {
 
 	using namespace System;
@@ -76,7 +77,9 @@ namespace Elveflow1Prueba {
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::CheckedListBox^ checkedListBox1;
 	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Button^ button5;
+
+	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Button^ b_connect;
 
 
 
@@ -111,6 +114,7 @@ namespace Elveflow1Prueba {
 		/// Variable del diseñador necesaria.
 		/// </summary>
 		System::ComponentModel::Container^ components;
+		int32_t  MyAF1_ID2 = -1;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -133,7 +137,8 @@ namespace Elveflow1Prueba {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->checkedListBox1 = (gcnew System::Windows::Forms::CheckedListBox());
 			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->b_connect = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -299,15 +304,24 @@ namespace Elveflow1Prueba {
 			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click_2);
 			// 
-			// button5
+			// button6
 			// 
-			this->button5->Location = System::Drawing::Point(42, 275);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(75, 23);
-			this->button5->TabIndex = 21;
-			this->button5->Text = L"button5";
-			this->button5->UseVisualStyleBackColor = true;
-			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click_1);
+			this->button6->Location = System::Drawing::Point(38, 328);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(75, 23);
+			this->button6->TabIndex = 22;
+			this->button6->Text = L"disconnect";
+			this->button6->UseVisualStyleBackColor = true;
+			// 
+			// b_connect
+			// 
+			this->b_connect->Location = System::Drawing::Point(206, 328);
+			this->b_connect->Name = L"b_connect";
+			this->b_connect->Size = System::Drawing::Size(111, 33);
+			this->b_connect->TabIndex = 23;
+			this->b_connect->Text = L"connect";
+			this->b_connect->UseVisualStyleBackColor = true;
+			this->b_connect->Click += gcnew System::EventHandler(this, &MyForm::b_connect_Click);
 			// 
 			// MyForm
 			// 
@@ -317,7 +331,8 @@ namespace Elveflow1Prueba {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(857, 562);
-			this->Controls->Add(this->button5);
+			this->Controls->Add(this->b_connect);
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->checkedListBox1);
 			this->Controls->Add(this->textBox1);
@@ -355,30 +370,41 @@ namespace Elveflow1Prueba {
 	private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 
-	//SET DE PRESION.
-	public: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
-		//Set presion, si quiero otra presión solo tengo que volverle a dar.
+	public: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {//Poner presion
 		int error = 0;
 		int  MyAF1_ID = -1;
-		error = AF1_Initialization("AF1", Z_regulator_type_none, Z_sensor_type_none, &MyAF1_ID);
-		Check_Error(error);// error send if not recognized
-
+		double* Calibration = new double[1000];
+		double* Calibration2 = new double[1000];
 		String^ in = textBox1->Text;
 		int In = System::Convert::ToInt16(in);
+		error = AF1_Initialization("MyAF1", Z_regulator_type__0_2000_mbar, Z_sensor_type_none, &MyAF1_ID);
+		Check_Error(error);// error send if not recognized 
+		error = 0;
 
-		double* Calibration = new double[1000];
-		AF1_Calib(MyAF1_ID, Calibration, 1000);//Perform calibration ! ! ! Take about 2 minutes ! ! !
-		error = Elveflow_Calibration_Save("D:\ELVEFLOW_CALIBRACIONES", Calibration, 1000); // Save calibration in the selected path, if no path or path non valid, open prompt to ask the file name
+		error=AF1_Calib(MyAF1_ID, Calibration, 1000);//Perform calibration ! ! ! Take about 2 minutes ! ! !
 		Check_Error(error);
 
-		
-		AF1_Set_Press(MyAF1_ID, In, Calibration, 1000);
+		error = 0;
+		char* path2 = "D:\\calib2";
 
-		//AF1_Destructor(MyAF1_ID);
-		//system("PAUSE");
+		error = Elveflow_Calibration_Save(path2, Calibration, 1000); // Save calibration in the selected path, if no path or path non valid, open prompt to ask the file name
+		Check_Error(error);
+
+		error = 0;
+
+		char* path = "D:\\calib";
+
+		error=Elveflow_Calibration_Load(path2, Calibration2, 1000);
+		Check_Error(error);// error send if not recognized 
+
+		error = 0;
+	
+		AF1_Set_Press(MyAF1_ID, In, Calibration, 1000);
+		Check_Error(error);// error send if not recognized 
+
 
 	}
-	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) { //EXIT pero no es funcional de momento, tengo que ponerle que salga del programa.
 		//AF1 DESTRUCTOR
 		//Si entro aquí es que he elegido el AF1: INICIALIZAR
 		//int  MyAF1_ID = -1;
@@ -397,7 +423,7 @@ namespace Elveflow1Prueba {
 		AF1_Set_Press(MyAF1_ID, In, Calibration, 1000);
 		
 	}
-	private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {//TODAS LAS VALVULAS
 		//ABRIR TODAS LAS VALVULAS
 		int error = 0;// use to obtain errors of function. If it's 0 -> no error , else -> error, see labview error 
 		int  MyMUX_ID = -1; //AQUI PUSE EL NOMBRE DEL MUX QUE SE VE CON EL PROGRAMA DE ELVEFLOW PARA QUE LO RECONOZCA-
@@ -410,7 +436,7 @@ namespace Elveflow1Prueba {
 		MUX_Set_all_valves(MyMUX_ID, all_valves_open, 16);
 
 	}
-	private: System::Void button3_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button3_Click_1(System::Object^ sender, System::EventArgs^ e) {//TODAS LAS VALVULAS
 		//CERRAR TODAS LAS VALVULAS
 		int error = 0;// use to obtain errors of function. If it's 0 -> no error , else -> error, see labview error 
 		int  MyMUX_ID = -1; //AQUI PUSE EL NOMBRE DEL MUX QUE SE VE CON EL PROGRAMA DE ELVEFLOW PARA QUE LO RECONOZCA-
@@ -423,60 +449,21 @@ namespace Elveflow1Prueba {
 		MUX_Set_all_valves(MyMUX_ID, all_valves_open, 16);
 	}
 
-	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {//Nivel de presion que quiero
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		{
-
-		}
-
 	}
 	
-
 private: System::Void label4_Click_1(System::Object^ sender, System::EventArgs^ e) {
 }
 
 
-
-private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-
-	int  MyMUX_ID = -1;
-	int input_valve = -1;
-	int output_valve = -1;
-	int valve_state = -1;
-	int all_valves[16] = { 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1 };//init all valves here !!! should be exactelly 8 elements, otherwise nothing will happen 
-	
-
-
-	MUX_Wire_Set_all_valves(MyMUX_ID, all_valves, 16);
-}
-private: System::Void button4_Click_1(System::Object^ sender, System::EventArgs^ e) {
-
-
-	int  MyMUX_ID = -1;
-	int input_valve = -1;
-	int output_valve = -1;
-	int valve_state = -1;
-	int all_valves[16] = { 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1 };//init all valves here !!! should be exactelly 8 elements, otherwise nothing will happen 
-	int all_valves_open[16] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	int all_valves_closed[16] = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
-
-	
-	int error = 0;// use to obtain errors of function. If it's 0 -> no error , else -> error, see labview error 
-	error = MUX_Initialization("Dev2", &MyMUX_ID);//Chose instrument port
-	Check_Error(error);// error send if not recognized
-
-	MUX_Set_all_valves(MyMUX_ID, all_valves, 16);
-
-}
-	private: System::Void checkedListBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-
+private: System::Void checkedListBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {//Checkbox 
 
 }		
 
-
-private: System::Void button4_Click_2(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void button4_Click_2(System::Object^ sender, System::EventArgs^ e) {//boton SEND del multiplexor
 	bool check;
 	int  MyMUX_ID = -1;
 	int input_valve = -1;
@@ -541,7 +528,18 @@ private: System::Void button4_Click_2(System::Object^ sender, System::EventArgs^
 
 }
 
-private: System::Void button5_Click_1(System::Object^ sender, System::EventArgs^ e) {
+
+private: System::Void b_connect_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	int error = 0;
+	//int  MyAF1_ID = -1;
+	int MyAF1_ID = System::Convert::ToInt32(MyAF1_ID2);
+	//error = AF1_Initialization("MyAF1", Z_regulator_type_m1000_1000_mbar, Z_sensor_type_Flow_1000_muL_min, &MyAF1_ID);
+	error = AF1_Initialization("MyAF1", Z_regulator_type__0_2000_mbar, Z_sensor_type_none, &MyAF1_ID);
+	Check_Error(error);// error send if not recognized 
+	//cout << "CONNECTED" << endl;
+	
+
 }
 };
 }
